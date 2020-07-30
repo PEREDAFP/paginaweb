@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hello Bulma!</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css">
+  </head>
+  <body>
+    <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-database.js"></script>
+    <!--<script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-auth.js"></script> -->
+
+    <!--Menú-->
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+      <div class="navbar-brand">
+        <a class="navbar-item" href="https://iesvillaverde.es">
+          <img src="imagenes/iesvillaverde.png" width="112" height="28">
+        </a>
+
+        <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="true" data-target="navbarBasicExample">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
+
+      <div id="navbarBasicExample" class="navbar-menu">
+        <div class="navbar-start">
+          <a class="navbar-item">
+            Home
+          </a>
+
+          <a class="navbar-item">
+            Documentation
+          </a>
+
+          <div class="navbar-item has-dropdown is-hoverable">
+            <a class="navbar-link">
+              More
+            </a>
+
+            <div class="navbar-dropdown">
+              <a class="navbar-item">
+                About
+              </a>
+              <a class="navbar-item">
+                Jobs
+              </a>
+              <a class="navbar-item">
+                Contact
+              </a>
+              <hr class="navbar-divider">
+              <a class="navbar-item">
+                Report an issue
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="navbar-end">
+          <div class="navbar-item">
+            <div class="buttons">
+              <a class="button is-primary">
+                <strong>Registro</strong>
+              </a>
+              <a class="button is-light">
+                Conexión
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+<!--Fin Menú-->
+<!--<div class="column">-->
+<section class="hero is-primary is-rounded">
+  <div class="hero-body is-bold is-boxed">
+    <div class="container has-text-centered">
+      <h1 class="title">
+        Control de Sesiones
+      </h1>
+      <h2 class="subtitle">
+        IES Villaverde
+      </h2>
+    </div>
+  </div>
+</section>
+<!--</div>-->
+<!--Apartado Sesión -->
+<div class="column notification is-primary is-rounded">
+ <div class="field is-grouped is-grouped-centered">
+<div class="field is-horizontal">
+  <div class="field-label">
+    <label class="label">Sesión</label>
+  </div>
+  <div class="field-body">
+    <div class="field is-horizontal">
+      <div class="control">
+        <div class="select is-fullwidth">
+          <select id="selectSesiones">
+
+          </select>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="field is-horizontal">
+  <label class="checkbox">
+    <input type="checkbox">
+    Cambio automático de sesiones
+  </label>
+</div>
+</div> <!-- Fin del grupo -->
+</div> <!-- Fin del apartado Sesión-->
+<div class="columns">
+  <div class="column notification is-success is-4 is-offset-2">
+    <p class="title is-5">Profesores de guardia</p>
+    <div class="content dropdown is-active">
+    <ul id="profesoresGuardia" >
+    </ul>
+  </div>
+    </div>
+  <div class="column notification is-danger is-4">
+    <p class="title is-5">Avisos</p>
+  </div>
+</div>
+
+<script type="module" src="./main.js"></script>
+
+</body>
+</html>
